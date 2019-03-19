@@ -1,0 +1,12 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: cloudsql-proxy
+spec:
+  selector:
+    app: cloudsql-proxy
+  ports:
+  - name: sql
+    protocol: TCP
+    port: 5432
+    targetPort: 5432
